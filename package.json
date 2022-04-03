@@ -1,7 +1,7 @@
 {
-  "name": "understrap",
+  "name": "theme-ecommerce-one",
   "version": "1.1.0",
-  "description": "WordPress Theme framework",
+  "description": "WordPress Ecommerce Theme",
   "main": "index.js",
   "scripts": {
     "bs": "browser-sync start --config src/build/browser-sync.config.js",
