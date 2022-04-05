@@ -11,6 +11,19 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<div class="top-header">
+	<div class="row">
+		<div class="col-lg-5">
+			<a href="">
+				<img src=" <?php echo "/img/"; ?> " alt="">
+			</a>
+		</div>
+		<div class="col-lg-7">
+
+		</div>
+	</div>
+</div>
+
 <nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
@@ -20,6 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php if ( 'container' === $container ) : ?>
 	<div class="container">
+
 <?php endif; ?>
 
 		<!-- Your site title as branding in the menu -->
@@ -42,9 +56,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		?>
 		<!-- end custom logo -->
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+		<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php //esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 			<span class="navbar-toggler-icon"></span>
-		</button>
+		</button> -->
 
 		<!-- The WordPress Menu goes here -->
 		<?php

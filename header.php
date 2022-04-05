@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
 $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">

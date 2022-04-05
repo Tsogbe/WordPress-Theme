@@ -22,18 +22,39 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		// Grab asset urls.
 		$theme_styles  = "/css/theme{$suffix}.css";
 		$theme_scripts = "/js/theme{$suffix}.js";
+
+		$css_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_styles );
+		wp_enqueue_style( 'theme-styles', get_template_directory_uri() . $theme_styles, array(), $css_version );
+		
+		$js_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_scripts );
+		wp_enqueue_script( 'theme-scripts', get_template_directory_uri() . $theme_scripts, array(), $js_version, true );
+
+
 		if ( 'bootstrap4' === $bootstrap_version ) {
 			$theme_styles  = "/css/theme-bootstrap4{$suffix}.css";
 			$theme_scripts = "/js/theme-bootstrap4{$suffix}.js";
+
+			$css_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_styles );
+			wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . $theme_styles, array(), $css_version );
+	
 		}
 
-		$css_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_styles );
-		wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . $theme_styles, array(), $css_version );
+		
 
 		wp_enqueue_script( 'jquery' );
 
-		$js_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_scripts );
-		wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . $theme_scripts, array(), $js_version, true );
+		if ( 'bootstrap4' === $bootstrap_version ) {
+			$theme_styles  = "/css/theme-bootstrap4{$suffix}.css";
+			$css_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_styles );
+			wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . $theme_styles, array(), $css_version );
+	
+			$theme_scripts = "/js/theme-bootstrap4{$suffix}.js";
+			$js_version = $theme_version . '.' . filemtime( get_template_directory() . $theme_scripts );
+			wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . $theme_scripts, array(), $js_version, true );
+
+		}
+
+		
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
