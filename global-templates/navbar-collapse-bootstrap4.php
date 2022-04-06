@@ -12,14 +12,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="top-header">
-	<div class="row">
-		<div class="col-lg-5">
-			<a href="">
-				<img src=" <?php echo "/img/"; ?> " alt="">
-			</a>
-		</div>
-		<div class="col-lg-7">
-
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<a href="">
+					<img class="logo" src=" <?php echo get_template_directory_uri() . "/img/logo.png"; ?> " alt="">
+				</a>
+			</div>
+			<div class="col-lg-7">
+				<div class="top-header-contact">
+					<a href="tel: +228 228 228 228 228"> <i class="fa fa-phone"></i> +228 228 228 228 228</a>
+					<a href="mailto:eric.tsogbe122@gmail.com"> <i class="fa fa-envelope"></i> eric.tsogbe122@gmail.com</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

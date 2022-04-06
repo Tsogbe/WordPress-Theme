@@ -15777,4 +15777,16 @@ figure.woocommerce-product-gallery__wrapper {
   clip: auto;
 }
 
+.top-header {
+  height: 132px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.top-header .logo {
+  max-width: 270px;
+}
+
 /*# sourceMappingURL=theme.css.map */
